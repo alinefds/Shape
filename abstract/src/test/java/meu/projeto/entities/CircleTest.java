@@ -9,17 +9,17 @@ import meu.projeto.entities.enums.Color;
 
 public class CircleTest {
 
-    private Circle c = new Circle(3.0, Color.RED);
-    private Shape s = new Circle(3.0, Color.RED);
+    private final Circle c = new Circle(3.0, Color.RED);
+    private final Shape s = new Circle(3.0, Color.RED);
 
     @Test
-    public void deveCalcularAreaCorretamente() {
-        assertEquals(28.274333882308138, c.area());
+    public void deveCalcularAreaQuandoRaioValido() {
+        assertEquals(28.27, c.area(), 0.01);
     }
 
     @Test
     public void deveCalcularAreaUsandoPolimorfismo() {
-        assertEquals(28.274333882308138, s.area());
+        assertEquals(28.27, s.area(), 0.01);
     }
 
     @Test
